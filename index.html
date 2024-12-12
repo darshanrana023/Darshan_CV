@@ -4,101 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Darshan Rana - Portfolio</title>
-    <!-- External CSS and JavaScript -->
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
-        /* Base styles */
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background: #f0f0f0;
+            background: #f9f9f9;
+            scroll-behavior: smooth;
         }
 
-        header {
+        .hero {
             height: 100vh;
-            background: linear-gradient(to bottom, #007bff, #6610f2);
+            background: linear-gradient(to bottom right, #007bff, #6610f2);
             color: #fff;
             display: flex;
             flex-direction: column;
-            align-items: center;
             justify-content: center;
+            align-items: center;
             text-align: center;
             position: relative;
         }
 
-        header img {
-            width: 300px;
-            height: 350px;
-            /* border-radius: 100%; */
+        .hero img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
             border: 5px solid #fff;
+            margin-bottom: 20px;
         }
 
-        header h1 {
+        .hero h1 {
             font-size: 3rem;
-            margin: 1rem 0;
+            margin-bottom: 10px;
         }
 
-        header p {
-            margin-bottom: 1rem;
+        .hero h2 {
+            font-size: 1.5rem;
+            color: #d1c4e9;
+            margin-bottom: 20px;
         }
 
-        header a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1.2rem;
-            margin: 0 10px;
+        .hero p {
+            margin: 0;
+            font-size: 1.1rem;
         }
 
-        .nav-bar {
+        .hero .btn-primary {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1.1rem;
+        }
+
+        .navbar {
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            z-index: 10;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
             display: flex;
             justify-content: center;
             padding: 1rem 0;
         }
 
-        .nav-bar a {
+        .navbar a {
             color: #fff;
-            text-decoration: none;
             margin: 0 15px;
+            text-decoration: none;
+            font-weight: 500;
             font-size: 1.1rem;
             transition: color 0.3s;
         }
 
-        .nav-bar a:hover {
-            color: #007bff;
+        .navbar a:hover {
+            color: #ffd700;
         }
 
-        .section {
-            padding: 5rem 1rem;
-            background: #fff;
-            margin: 2rem 0;
-            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-        }
-
-        .section h2 {
-            font-size: 2.5rem;
-            color: #007bff;
-            margin-bottom: 2rem;
-        }
-
-        .section p {
-            font-size: 1.2rem;
-            color: #333;
+        section {
+            padding: 50px 20px;
         }
 
         footer {
             background: #333;
             color: #fff;
             text-align: center;
-            padding: 2rem 0;
-            margin-top: 3rem;
+            padding: 20px;
         }
 
         footer a {
@@ -110,87 +102,91 @@
             text-decoration: underline;
         }
 
-        /* Media Queries */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2.5rem;
-            }
+        .social-icons {
+            margin-top: 10px;
+        }
 
-            .section h2 {
-                font-size: 2rem;
-            }
+        .social-icons a {
+            color: #fff;
+            margin: 0 10px;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #ffd700;
         }
     </style>
 </head>
 <body>
-    <header>
-        <img src="Darshan.jpg" alt="Darshan Rana">
-        <h1>Darshan Rana</h1>
-        <p>Ahmedabad, Gujarat | +91 96645 07546 | <a href="mailto:darshanrrana23@gmail.com">darshanrrana23@gmail.com</a></p>
+    <header class="hero">
+        <img src="Darshan.jpg.jpg" alt="Darshan Rana">
+        <h1>Hello,</h1>
+        <h1>I'm Darshan Rana</h1>
+        <h2>Data Engineer from Ahmedabad, India</h2>
+        <p>+91 9664507546 | <a href="mailto:darshanrrana23@gmail.com" style="color: #fff; text-decoration: underline;">darshanrrana23@gmail.com</a></p>
         <div>
-            <a href="https://linkedin.com/in/darshan-rana-91809622b" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-            <a href="https://github.com/darshanrana023" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://linkedin.com/in/darshan-rana-91809622b" target="_blank" class="btn btn-primary">Hire Me</a>
+            <a href="#" class="btn btn-outline-light">Download CV</a>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
         </div>
     </header>
 
-    <nav class="nav-bar">
+    <nav class="navbar">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
         <a href="#projects">Projects</a>
         <a href="#certifications">Certifications</a>
+        <a href="#education">Education</a>
     </nav>
 
-    <main class="container">
-        <section id="about" class="section">
+    <section id="about" style="background: #e9ecef;">
+        <div class="container text-center">
             <h2>About Me</h2>
-            <p>IT professional with extensive experience in data analysis, Python, SQL, and database management. Proficient in AWS, big data fundamentals, and skilled in optimizing processes, collaborating with teams, and leveraging data-driven solutions for organizational success.</p>
-        </section>
+            <p>I am a passionate Data Engineer with expertise in data analysis, SQL, and manufacturing optimization. With hands-on experience in tools like Rockwell software, I help businesses derive actionable insights from data.</p>
+        </div>
+    </section>
 
-        <section id="skills" class="section">
+    <section id="skills">
+        <div class="container text-center">
             <h2>Skills</h2>
+            <div class="row">
+                <div class="col-md-4">SQL</div>
+                <div class="col-md-4">Python</div>
+                <div class="col-md-4">Data Analysis</div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">Rockwell Software</div>
+                <div class="col-md-4">Manufacturing Optimization</div>
+                <div class="col-md-4">Collaboration</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" style="background: #e9ecef;">
+        <div class="container">
+            <h2>Experience</h2>
+            <p><strong>Consultant, Tata Technologies</strong> - Feb 2024 to Present</p>
             <ul>
-                <li>Programming: Python, HTML5, CSS3, JavaScript</li>
-                <li>Frameworks: ReactJS</li>
-                <li>Databases: SQL, MySQL, Microsoft SQL Server, MongoDB</li>
-                <li>Data Analysis Tools: Power BI, Excel</li>
-                <li>Cloud Technology: AWS</li>
-                <li>Version Control: Git, GitHub</li>
+                <li>Performed data analysis to optimize manufacturing processes.</li>
+                <li>Created custom shop operation forms in Rockwell software.</li>
+                <li>Collaborated with cross-functional teams to implement solutions.</li>
             </ul>
-        </section>
-
-        <section id="experience" class="section">
-            <h2>Work Experience</h2>
-            <p><strong>Consultant - Tata Technologies (02/2024 - Present):</strong> Optimized manufacturing processes using data analysis and SQL. Delivered solutions improving operational efficiency and implemented forms via Rockwell Software for production enhancement.</p>
-            <p><strong>Full Stack Developer Intern - InnoBrain Technologies (02/2023 - 05/2023):</strong> Built scalable web apps using MERN stack and integrated APIs with a focus on user experience and database management.</p>
-        </section>
-
-        <section id="education" class="section">
-            <h2>Education</h2>
-            <p>Bachelor of Engineering in IT - Sardar Patel College of Engineering (GPA: 8.22)</p>
-            <p>HSC in Science - Shree S.Z. Waghela Highschool (GPA: 71%)</p>
-        </section>
-
-        <section id="projects" class="section">
-            <h2>Projects</h2>
-            <p><strong>Shop Operation Automation:</strong> Improved production efficiency by developing operational forms implemented in Tata Motors' live lines.</p>
-            <p><strong>Krushak Agroshop:</strong> Created an e-commerce platform for agricultural products using MERN stack, integrating user authentication and cart systems.</p>
-        </section>
-
-        <section id="certifications" class="section">
-            <h2>Certifications</h2>
-            <p>AWS Cloud Practitioner Essentials</p>
-            <p>Data Science Training</p>
-            <p>SAP Code Unnati Program</p>
-        </section>
-    </main>
+        </div>
+    </section>
 
     <footer>
-        <p>&copy; 2024 Darshan Rana | Built for AWS Hosting</p>
+        <p>&copy; 2024 Darshan Rana | <a href="https://linkedin.com/in/darshan-rana-91809622b">LinkedIn</a></p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
 </body>
 </html>
